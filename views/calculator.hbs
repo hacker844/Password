@@ -1,0 +1,28 @@
+{{>head}}
+<title>Password Checker</title>
+<link rel="stylesheet" href="./public/css/style.css">
+{{>navbar}}
+
+<div class="container-fluid">
+  {{#if error}}
+  <div class="alert alert-danger" role="alert">
+    {{message}}
+  </div>
+  {{/if}}
+  <form action="/password-check" method="post">
+    <div class="container flex flex-col items-center mx-auto m-w-20">
+      <div class="d-flex flex-col align-center">
+        <input type="text" class="form-control button2" placeholder="Username" name="username">
+        <input type="text" class="form-control button2 mt-4" placeholder="Password" name="password">
+      </div>
+     
+      <div class="row">
+        <button type="submit" class="save button2">Check</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>
+
+{{>footer}}
